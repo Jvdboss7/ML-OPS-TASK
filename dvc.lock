@@ -4,8 +4,8 @@ stages:
     cmd: python src/load_data.py --config=params.yaml
     deps:
     - path: data_given/CarPrice.csv
-      md5: 289507f33023319d8fd17544fcf079b5
-      size: 9523
+      md5: b0b9f016976f92202279538ff99a559f
+      size: 8362
     - path: src/get_data.py
       md5: db7730736da9e3274083bc90eccf7000
       size: 656
@@ -14,33 +14,33 @@ stages:
       size: 648
     outs:
     - path: data/raw/CarPrice.csv
-      md5: 25e33ce1867e83cf77b8aad875b68ed4
-      size: 9533
+      md5: ef1c265baf1480c3a8684c7aa131bd1c
+      size: 8428
   split_data:
     cmd: python src/split_data.py --config=params.yaml
     deps:
     - path: data/raw/CarPrice.csv
-      md5: 25e33ce1867e83cf77b8aad875b68ed4
-      size: 9533
+      md5: ef1c265baf1480c3a8684c7aa131bd1c
+      size: 8428
     - path: src/split_data.py
       md5: 76eaa693835d274ae37591c49c35e72b
       size: 1071
     outs:
     - path: data/processed/test_CarPrice.csv
-      md5: c88cf4179c366373a0885e5473b3b7db
-      size: 2042
+      md5: 1443aee3633b081d8c886ed497cd7f1d
+      size: 1811
     - path: data/processed/train_CarPrice.csv
-      md5: 0d4ef26a01f55f6784f0804195005530
-      size: 7632
+      md5: 3fef25510dd07aabcea52308d68dd0ef
+      size: 6747
   train_and_evaluate:
     cmd: python src/train_and_evaluate.py --config=params.yaml
     deps:
     - path: data/processed/test_CarPrice.csv
-      md5: c88cf4179c366373a0885e5473b3b7db
-      size: 2042
+      md5: 1443aee3633b081d8c886ed497cd7f1d
+      size: 1811
     - path: data/processed/train_CarPrice.csv
-      md5: 0d4ef26a01f55f6784f0804195005530
-      size: 7632
+      md5: 3fef25510dd07aabcea52308d68dd0ef
+      size: 6747
     - path: src/train_and_evaluate.py
       md5: 6f4add34d08b4be577c4cf184b004cf1
       size: 2582
@@ -53,8 +53,8 @@ stages:
       md5: a4aab0167612f21a6085dd05cfafdbf6
       size: 41
     - path: report/scores.json
-      md5: 68f6467ab602430c2051cbfaebae35d9
-      size: 94
+      md5: fab916b29c1046a67fe5b96dbffeaf23
+      size: 95
     - path: saved_models/model.joblib
-      md5: cf6a698108e289d0b60bde8a3db1e36f
-      size: 1297
+      md5: 0a28e16b39558a9b38468d3b4bf91ec9
+      size: 1272

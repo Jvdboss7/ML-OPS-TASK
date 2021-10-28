@@ -1,0 +1,4 @@
+outs:
+- md5: 289507f33023319d8fd17544fcf079b5
+  size: 9523
+  path: CarPrice.csv

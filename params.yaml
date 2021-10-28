@@ -10,8 +10,8 @@ load_data:
   raw_dataset_csv: data/raw/CarPrice.csv
 
 split_data:
-  train_path: data/processed/CarPrice.csv
-  test_path: data/processed/CarPrice.csv
+  train_path: data/processed/train_CarPrice.csv
+  test_path: data/processed/test_CarPrice.csv
   test_size: 0.2
 
 estimators:
